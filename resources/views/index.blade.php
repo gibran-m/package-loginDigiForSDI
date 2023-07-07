@@ -194,7 +194,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <fieldset class="clearfix">
-                            <p ><span class="fa fa-user"></span><input type="text"  Placeholder="nrp test" value="{{ old('nrp') }}" name="nrp" id="nrp" required autofocus>
+                            {{-- <p ><span class="fa fa-user"></span><input type="text"  Placeholder="nrp test" value="{{ old('nrp') }}" name="nrp" id="nrp" required autofocus> --}}
                             </p> <!-- JS because of IE support; better: placeholder="Username" -->
                             <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Password" name="password" id="password" required>
                             </p> <!-- JS because of IE support; better: placeholder="Password" -->
