@@ -5,11 +5,11 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>{{ config('app.name', 'HRMIS') }}</title>
     <link rel="shortcut icon" href={{asset('local_assets\img\login\bjbs.png')}} type="image/x-icon">
-    <link href="/assets/css/puk/bootstrap5.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/login/global.css" />
-    <link rel="stylesheet" href="/assets/css/login/index.css" />
-    <link rel="stylesheet" href="/assets/css/login/roboto.css"/>
-    <link rel="stylesheet" href="/assets/css/puk/bootstrap-icon.css">
+    <link href="/login/assets/css/puk/bootstrap5.css" rel="stylesheet">
+    <link rel="stylesheet" href="/login/assets/css/login/global.css" />
+    <link rel="stylesheet" href="/login/assets/css/login/index.css" />
+    <link rel="stylesheet" href="/login/assets/css/login/roboto.css"/>
+    <link rel="stylesheet" href="/login/assets/css/puk/bootstrap-icon.css">
 
   </head>
   <body>
@@ -24,7 +24,7 @@
     @yield('login')
     <!-- page-wrapper end-->
     <!-- latest jquery-->
-    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <script src="../login/assets/js/jquery-3.5.1.min.js"></script>
     <!-- login js-->
     <!-- Plugin used-->
     @yield('script')

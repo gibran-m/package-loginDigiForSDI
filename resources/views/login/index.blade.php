@@ -5,16 +5,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <img class="left-image" src="/local_assets/img/login/left2.png" alt="looginpage">
+                    <img class="left-image" src="/login/local_assets/img/login/left2.png" alt="looginpage">
                 </div>
                 <div class="col-5"> 
                 <div class="row d-flex justify-content-center">
-                    <img class="right-group14" src="/local_assets/img/login/Group14.png" alt="looginpage">
+                    <img class="right-group14" src="/login/local_assets/img/login/Group14.png" alt="looginpage">
                 </div>
                 <div class="row mt-5">
                     <div class="container right-container-top">
                         <div class="row">
-                            <img class="right-logo" src="/local_assets/img/login/bjbs.png" alt="looginpage">
+                            <img class="right-logo" src="/login/local_assets/img/login/bjbs.png" alt="looginpage">
                         </div>
                         <div class="row">
                             <p>Human Resources Management Information System</p>
