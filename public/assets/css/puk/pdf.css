@@ -1,0 +1,84 @@
+.table-no-spacing, .table-header {
+    border: 1px solid black
+}
+
+.table-no-border-spacing {
+    /* border-collapse: separate; */
+    border-spacing: 0;
+}
+
+.table-no-border-spacing tr td {
+padding: 0;
+font-weight: bold;
+padding-left: 10px;
+}
+
+.table-header{
+    color: #fff;
+    background-color:dodgerblue; 
+    border:1px solid black
+}
+
+.table-penialain .header-row{
+    border:1px solid black 
+}
+
+.table-penialain th{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-penialain td{
+    padding: 20px;
+}
+
+
+.table-penialain .bg-lightblue{
+    background-color:lightblue;
+}
+
+.bg-dodgerblue{
+    background-color:dodgerblue; 
+
+}
+
+.table-penialain .padding-0 td{    
+    padding: 0 !important;
+    border-spacing: 0 !important;
+    padding-left: 20px !important;
+}
+
+.table-rekomendasi{
+    border: 1px solid black !important;
+}
+
+.table-rekomendasi .head-row1{
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+}
+
+.table-rekomendasi .head-row2{
+    border: 1px solid black !important;
+    background-color:dodgerblue; 
+    color: #fff;
+
+}
+
+.table-rekomendasi td{
+    padding: 20px;
+}
+
+
+.table-ttd{
+    border: 1px solid black !important;
+}
+
+.table-ttd th{
+    background-color:dodgerblue; 
+}
+
+.table-ttd td{
+    vertical-align: middle;
+}

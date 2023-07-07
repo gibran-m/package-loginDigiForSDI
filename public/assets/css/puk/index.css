@@ -1,0 +1,711 @@
+html, body {
+  height: 100%;
+}
+
+.text-neutral-400{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  color: var(--neutral-500, #828991);
+  text-align: center;
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: 120%;
+}
+
+.text-center {
+  text-align: center !important;
+  justify-content: center;
+}
+
+/*****************
+HEADER 
+******************/
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--geek-blue-6);
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--geek-blue-6);
+  font-weight: bold;
+}
+
+
+.bjb-syariah-2 {
+  /* position: relative; */
+  /* bottom : 10px ;
+  margin-right: 10px; */
+  width: 75px;
+  height: auto;
+  /* object-fit: cover; */
+}
+
+
+.menu1 {
+  position: relative;
+  line-height: 120%;
+}
+.bjb-syariah-2-parent,
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.bjb-syariah-2-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  gap: var(--gap-5xl);
+}
+.ink {
+  position: relative;
+  background-color: var(--neutral-neutral-6);
+  width: 2px;
+  height: 20px;
+  display: none;
+}
+.notifications-none-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.notification-child {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+}
+.b {
+  position: absolute;
+  top: 1px;
+  left: 15px;
+  line-height: 10px;
+  display: inline-block;
+  width: 6px;
+}
+.notification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+#username-header {
+  font-size: calc(1vw);
+}
+.keyboard-arrow-down-icon,
+.nama-icon-child {
+  position: absolute;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+}
+.nama-icon-child {
+  left: 70px;
+  border-radius: 50%;
+  background-color: var(--neutral-neutral-5);
+}
+.keyboard-arrow-down-icon {
+  left: 102px;
+  overflow: hidden;
+}
+.nama-icon {
+  position: relative;
+  width: 126px;
+  height: 28px;
+  font-size: var(--headline-h4-headline-size);
+  color: var(--neutral-neutral-1);
+}
+.navbar1 {
+  position: absolute;
+  top: 13px;
+  left: 1002px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--gap-xs);
+  text-align: center;
+  font-size: var(--font-size-5xs);
+  color: var(--base-white);
+}
+.icon-and-navbar {
+  position: relative;
+  width: 1164px;
+  height: 54px;
+}
+.navbar {
+  align-self: stretch;
+  background-color: var(--base-white);
+  box-shadow: var(--shadow-overlay);
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-29xl) 0 var(--padding-base);
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.task-typework-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+
+/*****************
+END OF HEADER
+******************/
+
+/*****************
+PAGE CONTENT 
+******************/
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+
+
+.pop-up-pegawai{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1;
+  padding: 20px 40px;
+
+}
+
+.custom-card .card-header{
+  background-color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: none;
+
+}
+
+.custom-card .card-header .b-star{
+  width: 150px;
+  height: auto;
+
+}
+
+.custom-card {
+  border-radius: 20px;
+}
+
+
+.row-m1{
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.detail-pegawai{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: var(--br-5xs);
+  background-color: var(--primary-50);
+  border: 1px solid var(--primary-500);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  padding: var(--padding-5xs) var(--padding-base);
+  align-items: center;
+  font-size: var(--description-regular-size);
+  color: var(--base-black);
+}
+.content1,
+.profile,
+.text {
+  display: flex;
+  align-items: center;
+}
+.text {
+  flex: 1;
+  height: 24px;
+  flex-direction: column;
+  justify-content: center;
+}
+.content1,
+.profile {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.profile {
+  flex: 1;
+  gap: var(--gap-base);
+}
+.content1 {
+  align-self: stretch;
+}
+.persetujuan-rencana-kerja-container {
+  align-self: stretch;
+  position: relative;
+  line-height: 120%;
+  
+}
+
+/*****************
+END OF PAGE CONTENT 
+******************/
+
+
+/*****************
+FOOTER 
+******************/
+footer{
+  background-color: #2F54EB;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+
+
+/*****************
+END OF FOOTER 
+******************/
+
+
+/*****************
+MODAL 
+******************/
+.modal-content{
+  border-radius: 30px;
+}
+.modal-header{
+  border:none;
+  margin:0px;
+  margin-bottom: 1.5rem;
+  padding: 0px;
+  text-align: start;
+}
+
+.modal-body{
+  padding: 0px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 1.5rem;
+
+}
+
+.modal-footer{
+  padding: 0px;
+  border-top: none;
+}
+.modal-dialog{
+  max-width: 502px;
+}
+
+.modal-content{
+  padding: 1.5rem;
+  max-height: 510px;
+}
+/*****************
+END OF MODAL 
+******************/
+
+
+
+/*****************
+FLOATING LOGO 
+******************/
+.floating-icon {
+  position: fixed;
+  bottom: 130px;
+  right: 35px;
+  width: 70px;
+  height: 70px;
+  color: #2F54EB;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 70px;
+}
+
+
+.floating-icon i{
+  margin-top: 100px;
+  padding-top: 100px;
+  top: 100px;
+}
+
+
+.floating-vindi img {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 30;
+  /* border-radius: 50%; */
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+}
+/*****************
+END OF FLOATING LOGO
+******************/
+
+
+
+/*****************
+TANGGAPI PAGE
+******************/
+
+.column-tanggapi{
+  float: left;
+}
+.left{
+    width: 35%;
+    height: 100%;
+}
+
+.right{
+  width: 65%;
+  height: 100%;
+}
+
+.card-tanggapi{
+  padding: 24px 24px;
+  justify-content: center;
+  text-align: left;
+  border-radius: 20px;
+}
+
+
+.image-penilai{
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+}
+
+.detail-penilai{
+  width: 100%;
+  padding: 5px;
+  margin-left: 2px;
+  border: 1px solid #AEB5BD ;
+  border-radius: 10px;
+}
+
+.penilai{
+  width:80%;
+  padding: 5px;
+}
+
+.penilai > div{
+  padding: 0.25rem;
+}
+/* 
+.nama-penilai{
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.jabatan-penilai{
+  font-size: 0.75rem;
+  color: #828991;
+  padding: 5px;
+} */
+
+.step-penilaian{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step-penilaian ul li{
+  /* background-color: #A83533; */
+}
+
+.step-penilaian a{
+  color: #2F54EB;
+}
+
+
+.nama-penilaian{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+smallest-text {
+  font-size: 12px;
+}
+
+#hint{
+  color: #828991;
+}
+.medium-heading-text{
+  font-size: 20px;
+  font-weight: bold;
+}
+.small-heading-text{
+  font-size: 16px
+}
+.medium-text{
+  font-size: 14px;
+}
+
+.smallest-text{
+  font-size: 12px;
+}
+
+div.list-perspektif > div {
+  padding: 1.25rem 0.667rem;
+  font-weight: bold;
+  margin: 1rem 0rem;
+  border: 1px solid;
+  border-color: #AEB5BD;
+  border-radius: 8px;
+}
+.heading-card-tanggapi{
+  background-color: #F8FAFB;
+  border: 1px solid;
+  border-color: #AEB5BD;
+  padding: 1rem 1rem;
+  width: 100%;
+  /* margin: 10px; */
+  margin-left: 2px;
+  border-radius: 8px;
+}
+.sasaran-kinerja{
+  margin: 1.5rem 0rem;
+}
+
+.perspektif-name{
+  width:70%;
+}
+
+.perspektif-bobot{
+  width: 12.5%;
+}
+
+.perspektif-indikator{
+  width:17.5%;
+}
+
+.heading-card-tanggapi > div{
+  padding:0px;
+}
+
+.heading-element-card-tanggapi {
+  padding: 0px;
+}
+
+.neutral-400{
+  color:#AEB5BD
+}
+.neutral-500{
+  color:#828991
+}
+
+.actived-menu{
+  border-right: 2px solid !important;
+  background-color: #F0F5FF;;
+}
+
+.disabled{
+  color:#AEB5BD !important;
+}
+
+/*****************
+TANGGAPI FORM
+******************/
+.info-pegawai{
+  border : 1px solid #AEB5BD;
+  border-radius: 10px;
+  margin: 5px;
+}
+.info-penilai{
+  border : 1px solid #2F54EB;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #F0F5FF;
+}
+
+.info-penilai i{
+  font-size: 30px;
+  color: #2F54EB;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.card{
+  border-radius: 20px;
+}
+
+.card .vindi-tanggapi{
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+}
+
+.card-right {
+  display: flex;
+}
+
+.card-right .card-body h4{
+  margin: auto;
+}
+
+.list-group {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.list-group-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.header-card-row, .body-card-row{
+  border : 1px solid #AEB5BD;
+  border-radius: 10px;
+  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.child-card-row{
+  border : 1px solid #AEB5BD;
+  border-radius: 10px;
+  margin: 10px;
+  width: 98%;
+  padding-top: 1em;
+
+
+  /* width: 58em;
+  padding-top: 1em; */
+  /* padding-top: 10rem;
+  padding-bottom: 10rem;
+  padding-right: 10rem; */
+}
+
+.custom-row{
+  display: flex;
+}
+
+.custom-col-left{
+  flex: 2.5%;
+}
+
+
+.custom-col-right{
+  flex: 97.5%;
+}
+
+
+.header-card-row{
+  background-color: #F8FAFB;
+
+}
+
+.header-card-row .col, .body-card-row .col-border{
+  border-left : 1px solid #AEB5BD;
+}
+
+
+.child-card-row .row .col .target{
+  background-color: #F0F5FF;
+  color: #2F54EB;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.card-rp{
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh; 
+}
+
+.card-rp .row-rp{
+  border: 1px solid #AEB5BD; border-radius: 10px; margin-left: 2px
+}
+
+.card-rp .row-btn{
+  margin-top: auto;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.list-target > li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--primary-500); /* Change the color */
+  font-weight:900; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.body-card-row .notif{
+  background-color:#F0F5FF;
+  border: 2px solid #2F54EB;
+}
+
+
+
+/******************
+ Preview page
+ *****************/
+ 
+.preview-card-row{
+  border : 1px solid #AEB5BD;
+  border-radius: 10px;
+  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.col-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/******************
+Table
+******************/
+/* 
+.custom-striped tbody thead{
+  background-color: #F4F7F9; 
+}
+
+.custom-striped tbody tr:nth-of-type(odd) {
+  background-color: #E9F0F4; 
+}
+
+.custom-striped tbody tr:nth-of-type(even) {
+  background-color: #F4F7F9;
+} */
+

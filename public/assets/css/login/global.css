@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  line-height: normal;
+  background: #FFF;
+  overflow: hidden;
+}
+
+:root {
+  /* fonts */
+  --body-regular: Roboto;
+
+  /* font sizes */
+  --font-size-sm: 0.88rem;
+  --body-regular-size: 1rem;
+  --heading-5-semibold-size: 1.5rem;
+
+  /* Colors */
+  --neutral-50: #f8fafb;
+  --base-black: #293441;
+  --base-white: #fff;
+  --neutral-500: #828991;
+  --primary-500: #2f54eb;
+  --info-500: #722ed1;
+  --neutral-400: #aeb5bd;
+
+  /* Gaps */
+  --gap-5xs: 0.5rem;
+
+  /* Paddings */
+  --padding-5xl: 1.5rem;
+  --padding-base: 1rem;
+
+  /* border radiuses */
+  --br-9xs: 4px;
+  --br-5xs: 8px;
+}
