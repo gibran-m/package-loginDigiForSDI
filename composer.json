@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Smpl\\Login\\LoginDigiForSdiServiceProvider"
+                "Smpl\\Logindigiforsdi\\LoginDigiForSdiServiceProvider"
             ]
         }
     },
