@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use Smpl\Login\Http\Controllers\LoginController;
+use Smpl\Logindigiforsdi\Http\Controllers\LogindigiforsdiController;
 
 
     Route::get('/', function () {

@@ -6,8 +6,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Smpl\\Login\\": "src/",
-            "Smpl\\Login\\Http\\Controllers\\": "src/Http/Controllers"
+            "Smpl\\Logindigiforsdi\\": "src/",
+            "Smpl\\Logindigiforsdi\\Http\\Controllers\\": "src/Http/Controllers"
         }
     },
     "authors": [

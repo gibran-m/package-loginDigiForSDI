@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Smpl\\Login\\' => array($baseDir . '/src'),
+    'Smpl\\Logindigiforsdi\\' => array($baseDir . '/src'),
 );
