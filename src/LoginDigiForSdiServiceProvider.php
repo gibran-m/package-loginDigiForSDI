@@ -32,5 +32,8 @@ class LoginDigiForSdiServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/views/login'  => resource_path('views/vendor/login')
         ],'views');
+        $this->publishes([
+            __DIR__.'/../public/'  => public_path('/')
+        ],'public');
     }
 }
