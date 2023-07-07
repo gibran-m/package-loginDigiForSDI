@@ -12,8 +12,8 @@ class LoginDigiForSDIController extends Controller
 {
     public function index(Request $request)
     {
-     dd(view());
-     return view('index'); 
+    //  dd(view());
+     return view('vendor.login.index'); 
 
     }
 
