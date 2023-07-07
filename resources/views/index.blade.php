@@ -209,7 +209,7 @@
                     <div class="clearfix"></div>
 
                 </div> <!-- end login -->
-                <div class="logo">SMPL
+                <div class="logo">DIGI FOR SDI
                     
                     <div class="clearfix"></div>
                 </div>
