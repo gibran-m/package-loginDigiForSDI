@@ -17,6 +17,11 @@ class LoginDigiForSDIController extends Controller
 
     }
 
+    public function auth(Request $request){
+        
+        return view('vendor.login.index'); 
+    }
+
     public function logout(Request $request)
     {
         $this->guard()->logout();

@@ -7,4 +7,4 @@ Route::get('/', function () {
     return view('login::index');
 })->name('login');
 
-Route::post('/auth', [APIController::class,'auth'])->name('login-auth');
+Route::post('/auth', [LogindigiforsdiController::class,'auth'])->name('login-auth');
