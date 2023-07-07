@@ -1,5 +1,5 @@
 {
-    "name": "smpl/login",
+    "name": "smpl/loginDigiForSDI",
     "description": "laravel custom login package",
     "type": "library",
     "version": "1.8",
