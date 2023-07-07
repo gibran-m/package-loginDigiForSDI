@@ -1,10 +1,10 @@
 <?php
 
-namespace Smpl\Login;
+namespace Smpl\Logindigiforsdi;
 
 use Illuminate\Support\ServiceProvider;
 
-class LoginServiceProvider extends ServiceProvider
+class LoginDigiForSdiServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -13,7 +13,7 @@ class LoginServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Smpl\Login\Http\Controllers\LoginController');
+        $this->app->make('Smpl\Logindigiforsdi\Http\Controllers\LoginDigiForSDIController');
     }
 
     /**
