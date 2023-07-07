@@ -1,4 +1,4 @@
-@extends('login.template-copy')
+@extends('vendor.login.template-copy')
 
 @section('login')
     <section>         
