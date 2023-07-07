@@ -1,6 +1,6 @@
 <?php
 
-namespace Smpl\Login\Http\Controllers;
+namespace Smpl\LoginDigiForSDI\Http\Controllers;
 
 use GuzzleHttp\RequestOptions;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Routing\Controller;
 
-class LoginController extends Controller
+class LoginDigiForSDIController extends Controller
 {
     public function index(Request $request)
     {
