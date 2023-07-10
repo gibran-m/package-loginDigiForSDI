@@ -1,221 +1,103 @@
-<!-- resources/views/auth/login.blade.php -->
-<style>
-    @charset "utf-8";
+@extends('vendor.login.template-copy')
 
-
-    @import url//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
-
-
-
-    div.main{
-        background: #0264d6; /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover,  #0264d6 1%, #1c2b5a 100%); /* FF3.6+ */
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#0264d6), color-stop(100%,#1c2b5a)); /* Chrome,Safari4+ */
-        background: -webkit-radial-gradient(center, ellipse cover,  #0264d6 1%,#1c2b5a 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-radial-gradient(center, ellipse cover,  #0264d6 1%,#1c2b5a 100%); /* Opera 12+ */
-        background: -ms-radial-gradient(center, ellipse cover,  #0264d6 1%,#1c2b5a 100%); /* IE10+ */
-        background: radial-gradient(ellipse at center,  #0264d6 1%,#1c2b5a 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0264d6', endColorstr='#1c2b5a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-        height:calc(100vh);
-        width:100%;
-    }
-
-    [class*="fontawesome-"]:before {
-        font-family: 'FontAwesome', sans-serif;
-    }
-
-    /* ---------- GENERAL ---------- */
-
-    * {
-        box-sizing: border-box;
-        margin:0px auto;
-
-    &:before,
-    &:after {
-         box-sizing: border-box;
-     }
-
-    }
-
-    body {
-
-        color: #606468;
-        font: 87.5%/1.5em 'Open Sans', sans-serif;
-        margin: 0;
-    }
-
-    a {
-        color: #eee;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    input {
-        border: none;
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.5em;
-        padding: 0;
-        -webkit-appearance: none;
-    }
-
-    p {
-        line-height: 1.5em;
-    }
-
-    .clearfix {
-        *zoom: 1;
-
-    &:before,
-    &:after {
-         content: ' ';
-         display: table;
-     }
-
-    &:after {
-         clear: both;
-     }
-
-    }
-
-    .container {
-        left: 50%;
-        position: fixed;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* ---------- LOGIN ---------- */
-
-    #login form{
-        width: 250px;
-    }
-    #login, .logo{
-        display:inline-block;
-        width:40%;
-    }
-    #login{
-        border-right:1px solid #fff;
-        padding: 0px 22px;
-        width: 59%;
-    }
-    .logo{
-        color:#fff;
-        font-size:50px;
-        line-height: 125px;
-    }
-
-    #login form span.fa {
-        background-color: #fff;
-        border-radius: 3px 0px 0px 3px;
-        color: #000;
-        display: block;
-        float: left;
-        height: 50px;
-        font-size:24px;
-        line-height: 50px;
-        text-align: center;
-        width: 50px;
-    }
-
-    #login form input {
-        height: 50px;
-    }
-    fieldset{
-        padding:0;
-        border:0;
-        margin: 0;
-
-    }
-    #login form input[type="text"], input[type="password"] {
-        background-color: #fff;
-        border-radius: 0px 3px 3px 0px;
-        color: #000;
-        padding: 0 16px;
-        width: 200px;
-    }
-
-    #login form input[type="submit"] {
-        border-radius: 3px;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        background-color: #000000;
-        color: #eee;
-        font-weight: bold;
-        /* margin-bottom: 2em; */
-        text-transform: uppercase;
-        padding: 5px 10px;
-        height: 30px;
-    }
-
-    #login form input[type="submit"]:hover {
-        background-color: #d44179;
-    }
-
-    #login > p {
-        text-align: center;
-    }
-
-    #login > p span {
-        padding-left: 5px;
-    }
-    .middle {
-        display: flex;
-        width: 600px;
-    }
-</style>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<div class="main">
-    <div class="container">
-        <center>
-            <div class="middle">
-                <div id="login">
-                    @if ($errors->any())
-                        <div class="alert alert-danger" role="alert">
-                            <p>
-                                <span class="fa fa-exclamation-triangle"></span>
-                                @if ($errors->has('nrp'))
-                                    {{ $errors->first('nrp') }}
-                                @else
-                                    {{ $errors->first('password') }}
-                                @endif
-                            </p>
-                        </div>
-                    @endif
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-                        <fieldset class="clearfix">
-                            {{-- <p ><span class="fa fa-user"></span><input type="text"  Placeholder="nrp test" value="{{ old('nrp') }}" name="nrp" id="nrp" required autofocus> --}}
-                            </p> <!-- JS because of IE support; better: placeholder="Username" -->
-                            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Password" name="password" id="password" required>
-                            </p> <!-- JS because of IE support; better: placeholder="Password" -->
-
-                            <div>
-                                <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="MASUK"></span>
-                            </div>
-
-                        </fieldset>
-                    </form>
-
-                    <div class="clearfix"></div>
-
-                </div> <!-- end login -->
-                <div class="logo">DIGI FOR SDI
-                    
-                    <div class="clearfix"></div>
+@section('login')
+    <section>         
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <img class="left-image" src="/login/local_assets/img/login/left2.png" alt="looginpage">
                 </div>
+                <div class="col-5"> 
+                <div class="row d-flex justify-content-center">
+                    <img class="right-group14" src="/login/local_assets/img/login/Group14.png" alt="looginpage">
+                </div>
+                <div class="row mt-5">
+                    <div class="container right-container-top">
+                        <div class="row">
+                            <img class="right-logo" src="/login/local_assets/img/login/bjbs.png" alt="looginpage">
+                        </div>
+                        <div class="row">
+                            <p>Human Resources Management Information System</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <form class="theme-form login-form needs-validation @if($errors->any()) was-validated @enderror" id="loginFormDigi" method="POST" action="{{ route('login-auth') }}" novalidate>
+                    @csrf
+                    <div class="container ">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col">
+                            <div class="card" style="border-radius: 1rem; border:none">
+                            <div class="card-body text-center" style="padding-left: 30px; padding-right 30px; padding-top:0px">
+                                <h3>Sign In</h3>
 
+                                <div class="mb-3">
+                                </div>
+                    
+                                <div class="form-outline form-group mb-4">
+                                    <label for="email"><i class="bi bi-person"></i></label>
+                                    <input class="form-control" type="email" required="" placeholder="Username" name="email" id="email" value="{{ old('email') }}" autofocus />
+                                    @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                                </div>
+                    
+                                <div class="form-outline form-group mb-4">
+                                    <label for="email"><i class="bi bi-lock"></i></label>
+                                    <input class="form-control" id="password"  type="password" name="password" required="" placeholder="Passsword" />
+                                    @error('password') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                </div>
+
+                                <div class="text-end">
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+
+                                <div class="mb-3">
+                                </div>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit" style="width: 100%">Sign In</button>
+                                
+                                <div class="mb-3">
+                                </div>
+
+                                <p class="text-muted">Belum punya akun? <a href="#" class="text-danger">Sign Up!</a></p>
+                                <div class="mb-5">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <br>
+                <br>
+                <div class="row mt-5 d-flex text-center justify-content-center align-items-end bottom-footer">
+                    <div class="col">
+                        <p>&copy; 2023 bank <b>bjb</b> syariah<br>
+                            <span class="text-muted" style="font-size: 12px"> version {{config('app.version') ?? 0 }}</span></p>
+                    </div>
+                </div>
+                
+
+                
+
+                
+                </div>
             </div>
-        </center>
-    </div>
+          </div>
+    </section>
+@endsection
 
-</div>
+@section('script')
+<script>
+    
+    function submitForm() {
+        document.getElementById("loginFormDigi").submit();
+    }
+
+</script>
+
+@endsection
+
