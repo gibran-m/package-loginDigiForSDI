@@ -10,6 +10,15 @@ use Illuminate\Routing\Controller;
 
 class LoginDigiForSDIController extends Controller
 {
+
+    public function __construct() 
+    {
+        $this->urlAuth = env('BASE_URL_API_AUTH', 'localhost:8099');
+        $this->urlHrdlive = env('BASE_URL_API_HRDLIVE', 'localhost:8099');
+        $this->urlBstar = env('BASE_URL_API_BSTAR', 'localhost:8099');
+        $this->Bearertoken = null;
+    }
+
     public function index(Request $request)
     {
     //  dd(view());
@@ -188,5 +197,28 @@ class LoginDigiForSDIController extends Controller
         $request->session()->invalidate();
 
         return redirect()->intended($this->redirectPath());
+    }
+
+    public function postLogin($url, $param) {
+
+        $client = new Client([
+            'base_uri' => $this->urlAuth,
+            // 'verify' => false
+            ]);
+
+        $headers = [
+            'Content-Type'      => 'application/json',
+            'Connection'       => 'keep-alive',
+            'Transfer-Encoding' => 'chunked'
+        ];
+
+        $response = $client->post($url, [
+            'headers' => $headers,
+            'json' => $param
+        ]);
+
+        return json_decode((string) $response->getBody(), true);
+
+
     }
 }
