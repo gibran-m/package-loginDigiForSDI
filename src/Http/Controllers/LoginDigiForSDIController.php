@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Routing\Controller;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class LoginDigiForSDIController extends Controller
 {
