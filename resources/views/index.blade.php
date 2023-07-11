@@ -23,7 +23,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <form class="theme-form login-form needs-validation @if($errors->any()) was-validated @enderror" id="loginFormDigi" method="POST" action="{{ route('master-login-auth') }}" novalidate>
+                    <form class="theme-form login-form needs-validation @if($errors->any()) was-validated @enderror" id="loginFormDigi" method="POST" action="{{ route('login-auth') }}" novalidate>
                     @csrf
                     <div class="container ">
                         <div class="row d-flex justify-content-center align-items-center h-100">
