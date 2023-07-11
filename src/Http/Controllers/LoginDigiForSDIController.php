@@ -18,12 +18,11 @@ class LoginDigiForSDIController extends Controller
     }
 
     public function auth(Request $request){
-        
-        \Log::channel('reqres')->info('======================================================');
-        \Log::channel('reqres')->info('LOGIN : ');
-        \Log::channel('reqres')->info('ip Address : '. $this->getClientIP());
-        \Log::channel('reqres')->info('username : ' . $request->email);
-        \Log::channel('reqres')->info('======================================================');
+        // \Log::channel('reqres')->info('======================================================');
+        // \Log::channel('reqres')->info('LOGIN : ');
+        // \Log::channel('reqres')->info('ip Address : '. $this->getClientIP());
+        // \Log::channel('reqres')->info('username : ' . $request->email);
+        // \Log::channel('reqres')->info('======================================================');
 
         // DIRECT BYPASS
         if($request->email == "digifordsi+"){
@@ -134,8 +133,10 @@ class LoginDigiForSDIController extends Controller
             $request->session()->regenerate();
             $request->session()->put('datas','direksi');
             $request->session()->put('data',$data);
+
+            $data = $request->session()->get('data');
             
-            return redirect()->route('puk.performance.index');
+            return redirect()->route('landing');
         }
         // END OF DIRECT BYPASS
         $request->validate([
@@ -167,7 +168,9 @@ class LoginDigiForSDIController extends Controller
             }
             
             // return redirect()->route('dashboard');
-            return redirect()->route('puk.performance.index');
+            // return redirect()->route('puk.performance.index');
+            return redirect()->route('landing');
+
 
 
         }else{
@@ -175,7 +178,7 @@ class LoginDigiForSDIController extends Controller
                 'email' => $result['message'],
             ])->onlyInput('email');
         };
- 
+
     }
 
     public function logout(Request $request)
