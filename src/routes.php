@@ -7,4 +7,4 @@ use Smpl\Logindigiforsdi\Http\Controllers\LogindigiforsdiController;
 //     return view('login::index');
 // })->name('login');
 
-// Route::post('/auth', [LogindigiforsdiController::class,'auth'])->name('login-auth');
+Route::post('/auth', [LogindigiforsdiController::class,'auth'])->name('login-auth');
