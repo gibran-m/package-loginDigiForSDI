@@ -171,8 +171,11 @@ class LoginDigiForSDIController extends Controller
 
         if( isset($result['boii'])){
             
-            $request->session()->regenerate();
-            $request->session()->put('data',$result);
+            // $request->session()->regenerate();
+            // $request->session()->put('data',$result);
+
+            session()->regenerate();
+            session(['data' => $result]);
             
             if(strpos($result['boii']['data']['nip'], "DIR")  !== false){
                 $request->session()->put('datas','direksi');
@@ -196,7 +199,10 @@ class LoginDigiForSDIController extends Controller
     {
         $this->guard()->logout();
 
-        $request->session()->invalidate();
+        // $request->session()->invalidate();
+        session()->flush();
+        session()->regenerate(true);
+        
 
         return redirect()->intended($this->redirectPath());
     }
